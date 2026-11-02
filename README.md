@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Practica3paraexamen
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.5.
@@ -57,3 +58,6 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# practica3paraexamen
+>>>>>>> 4577b6f38237d7c6edbc46a2814d4ad6b2beb3de
