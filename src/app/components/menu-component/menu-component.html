@@ -1,0 +1,54 @@
+<nav class="w-full bg-slate-900 shadow-lg border-b border-slate-700">
+    <div class="flex flex-wrap items-center justify-between gap-4 px-6 py-4 max-w-7xl mx-auto">
+
+        <ul class="flex items-center gap-6">
+            <li>
+                <a class="text-white font-bold text-xl hover:text-cyan-400 transition duration-200"
+                    [routerLink]="['/home']">
+                    Home
+                </a>
+            </li>
+        </ul>
+        <ul class="flex items-center gap-6">
+            <li>
+                <a class="text-white font-bold text-xl hover:text-cyan-400 transition duration-200"
+                    [routerLink]="['/doctores']">
+                    Doctores
+                </a>
+            </li>
+        </ul>
+        <ul class="flex items-center gap-6">
+            <li>
+                <a class="text-white font-bold text-xl hover:text-cyan-400 transition duration-200"
+                    [routerLink]="['/crear']">
+                    Añadir Doctor
+                </a>
+            </li>
+        </ul>
+        @if (usuario(); as dato) {
+            <form class="flex items-center" role="search">
+                <button
+                    class="px-5 py-2.5 bg-slate-800 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition duration-200 shadow-sm"
+                    type="button">
+                    👤 {{dato.apellido}}
+                </button>
+            </form>
+        }@else {
+            <form class="flex items-center" role="search">
+                <button
+                    class="px-5 py-2.5 bg-slate-800 border border-slate-600 text-gray-300 font-semibold rounded-lg hover:bg-slate-700 transition duration-200"
+                    type="button">
+                    No found
+                </button>
+            </form>
+        }
+        <form class="flex items-center" role="search">
+            <button (click)="logout()"
+                class="px-5 py-2.5 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 active:scale-95 transition duration-200 shadow-md"
+                type="button">
+                Log Out
+            </button>
+        </form>
+
+    </div>
+</nav>
